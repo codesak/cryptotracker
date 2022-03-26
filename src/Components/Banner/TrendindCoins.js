@@ -34,7 +34,162 @@ const TrendindCoins = () => {
         </div>
 
         {/* Right */}
-                    
+        <div className='right'>
+            <div className='right-flex-1'>
+                <div className='right-flex-child-1'>
+                    <div className='card'>
+                <div className='top'>
+                            {/* <img src={BTC} alt='/' /> */}
+                            <img src={trending[0].image} alt='' />
+                        </div>
+                        <div>
+                            <h5>{trending[0].name}</h5>
+                            <p>
+                                ${trending[0].current_price.toLocaleString()}
+                                </p>
+                        </div>
+
+                        {trending[0].price_change_percentage_24h < 0 ? (
+                            <span className='red'>
+                                <FiArrowDown className='icon' />
+                                {trending[0].price_change_percentage_24h.toFixed(2)}%
+                            </span>
+                        ) : (
+                                <span className='green'>
+                                    <FiArrowUpRight className='icon' />
+                                    {trending[0].price_change_percentage_24h.toFixed(2)}%
+                                </span>
+                            )}
+                    </div>
+                    </div>
+                
+                <div className='right-flex-child-2'>
+                <div className='card'>
+                <div className='top'>
+                            {/* <img src={BTC} alt='/' /> */}
+                            <img src={trending[1].image} alt='' />
+                        </div>
+                        <div>
+                            <h5>{trending[1].name}</h5>
+                            <p>${trending[1].current_price.toLocaleString()}</p>
+                        </div>
+
+                        {trending[0].price_change_percentage_24h < 0 ? (
+                            <span className='red'>
+                                <FiArrowDown className='icon' />
+                                {trending[1].price_change_percentage_24h.toFixed(2)}%
+                            </span>
+                        ) : (
+                                <span className='green'>
+                                    <FiArrowUpRight className='icon' />
+                                    {trending[1].price_change_percentage_24h.toFixed(2)}%
+                                </span>
+                            )}
+                    </div> 
+                </div>
+                </div>
+            
+            <div className='right-flex-2'>
+            <div className='right-flex-child-1'>
+            <div className='card'>
+                <div className='top'>
+                            {/* <img src={BTC} alt='/' /> */}
+                            <img src={trending[2].image} alt='' />
+                        </div>
+                        <div>
+                            <h5>{trending[2].name}</h5>
+                            <p>${trending[2].current_price.toLocaleString()}</p>
+                        </div>
+
+                        {trending[0].price_change_percentage_24h < 0 ? (
+                            <span className='red'>
+                                <FiArrowDown className='icon' />
+                                {trending[2].price_change_percentage_24h.toFixed(2)}%
+                            </span>
+                        ) : (
+                                <span className='green'>
+                                    <FiArrowUpRight className='icon' />
+                                    {trending[2].price_change_percentage_24h.toFixed(2)}%
+                                </span>
+                            )}
+                    </div>
+            </div>
+                <div className='right-flex-child-2'>
+                <div className='card'>
+                <div className='top'>
+                            {/* <img src={BTC} alt='/' /> */}
+                            <img src={trending[3].image} alt='' />
+                        </div>
+                        <div>
+                            <h5>{trending[3].name}</h5>
+                            <p>${trending[3].current_price.toLocaleString()}</p>
+                        </div>
+
+                        {trending[0].price_change_percentage_24h < 0 ? (
+                            <span className='red'>
+                                <FiArrowDown className='icon' />
+                                {trending[3].price_change_percentage_24h.toFixed(2)}%
+                            </span>
+                        ) : (
+                                <span className='green'>
+                                    <FiArrowUpRight className='icon' />
+                                    {trending[3].price_change_percentage_24h.toFixed(2)}%
+                                </span>
+                            )}
+                    </div>
+                </div>
+            </div>
+            <div className='right-flex-3'>
+            <div className='right-flex-child-1'>
+            <div className='card'>
+                <div className='top'>
+                            {/* <img src={BTC} alt='/' /> */}
+                            <img src={trending[4].image} alt='' />
+                        </div>
+                        <div>
+                            <h5>{trending[4].name}</h5>
+                            <p>${trending[0].current_price.toLocaleString()}</p>
+                        </div>
+
+                        {trending[4].price_change_percentage_24h < 0 ? (
+                            <span className='red'>
+                                <FiArrowDown className='icon' />
+                                {trending[4].price_change_percentage_24h.toFixed(2)}%
+                            </span>
+                        ) : (
+                                <span className='green'>
+                                    <FiArrowUpRight className='icon' />
+                                    {trending[4].price_change_percentage_24h.toFixed(2)}%
+                                </span>
+                            )}
+                    </div>
+            </div>
+                <div className='right-flex-child-2'>
+                <div className='card'>
+                <div className='top'>
+                            {/* <img src={BTC} alt='/' /> */}
+                            <img src={trending[5].image} alt='' />
+                        </div>
+                        <div>
+                            <h5>{trending[5].name}</h5>
+                            <p>${trending[5].current_price.toLocaleString()}</p>
+                        </div>
+
+                        {trending[5].price_change_percentage_24h < 0 ? (
+                            <span className='red'>
+                                <FiArrowDown className='icon' />
+                                {trending[0].price_change_percentage_24h.toFixed(2)}%
+                            </span>
+                        ) : (
+                                <span className='green'>
+                                    <FiArrowUpRight className='icon' />
+                                    {trending[5].price_change_percentage_24h.toFixed(2)}%
+                                </span>
+                            )}
+                    </div>
+                </div>
+            </div>
+            </div>  
         {/* right side end */}
         </div>
     </div>

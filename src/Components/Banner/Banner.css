@@ -1,0 +1,86 @@
+:root {
+    --primary: #118c4f;
+    --background: #f5f8ff;
+  }
+  
+  .primary {
+    color: var(--primary);
+  }
+
+.hero .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hero .left {
+    padding: 1rem;
+}
+
+.hero h1 {
+    padding: 1rem 0;
+}
+
+.hero .input-container {
+    padding: 1rem 0;
+}
+
+.hero .right {
+    padding: 1rem;
+}
+
+.hero .img-container {
+    width: 100%;
+    display: flex;
+}
+
+.hero img {
+    max-width: 80%;
+    margin: auto;
+}
+
+.btn {
+    padding: 14px 32px;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 24px 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+  }
+  
+  input {
+    padding: 12px 32px;
+    border: 1px solid var(--primary);
+    background: transparent;
+    border-radius: 24px 4px;
+    font-size: 1rem;
+    margin-right: .8rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  
+
+@media screen and (max-width: 940px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 1rem 0;
+      }
+    
+      input {
+        width: 100%;
+      }
+}

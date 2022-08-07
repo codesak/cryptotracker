@@ -19,12 +19,12 @@ import {
   Paper,
 } from "@material-ui/core";
 import { CryptoState } from "../CryptoContext";
-import { CoinList } from "./Config/api";
+// import { CoinList } from "./Config/api";
 
 const CoinsTable = () => {
+  const {coins ,loading}=CryptoState();
     
-  const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState("false");
+  
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
@@ -46,7 +46,7 @@ const CoinsTable = () => {
     },
   });
 
-function numberWithCommas(x) {
+ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   const classes = useStyles();
@@ -59,14 +59,14 @@ function numberWithCommas(x) {
     },
   });
 
-  const { currency, symbol } = CryptoState();
-  const FetchCoins = async () => {
-    setLoading(true);
-    const { data } = await axios.get(CoinList(currency));
+  const { currency, symbol ,FetchCoins } = CryptoState();
+  // const FetchCoins = async () => {
+  //   setLoading(true);
+  //   const { data } = await axios.get(CoinList(currency));
    
-    setCoins(data);
-    setLoading(false);
-  };
+  //   setCoins(data);
+  //   setLoading(false);
+  // };
   console.log(coins);
   useEffect(() => {
     FetchCoins();
@@ -130,7 +130,7 @@ function numberWithCommas(x) {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <TableRow
-                        onClick={() => history.push(`/coins/${row.id}`)}
+                        onClick={() => history(`/coins/${row.id}`)}
                         className={classes.row}
                         key={row.name}
                       >

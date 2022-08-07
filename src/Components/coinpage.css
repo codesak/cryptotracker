@@ -2,7 +2,7 @@
 .maincontainer{
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
 }
   .coin-container .content {
@@ -16,6 +16,12 @@
     border-radius: 8px;
     
 }
+
+/* .addbtn{
+    position: relative;
+    left: 30rem;
+    bottom: 2rem;
+} */
 
 .rank {
     margin: .5 0;
@@ -48,6 +54,7 @@
 
 .info p {
     padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 
@@ -75,6 +82,14 @@
     margin: 1rem 0;
 }
 
+.container-2 {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+}
+
 @media screen and (max-width: 700px) {
     .coin-container .content {
         max-width: 100%;
@@ -94,5 +109,17 @@
     .rank-btn {
         margin: .5rem 0;
     }
+}
+
+@media screen and (max-width: 700px) {
+    .container-2{
+        margin-left: 0;
+        width: 100%;
+    }
+    .info .coin-price
+    {
+        font-size: small;
+    }
+
 }
 

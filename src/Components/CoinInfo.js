@@ -3,6 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { HistoricalChart } from "./Config/api";
 import { Line } from "react-chartjs-2";
+import Chart from 'chart.js/auto';
+
 
 import {
   CircularProgress,
@@ -27,13 +29,13 @@ const CoinInfo = ({coin}) => {
     setHistoricData(data.prices);
   };
 
-  console.log(coin);
-  console.log(historicData)
+  // console.log(coin);
+  // console.log(historicData)
 
   useEffect(() => {
     fetchHistoricData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [days]);
+  },[currency][days]);
 
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -111,6 +113,7 @@ const CoinInfo = ({coin}) => {
               width: "100%",
             }}
           >
+            {/* {console.log("yash")} */}
             {chartDays.map((day) => (
               <SelectButton
                 key={day.value}
